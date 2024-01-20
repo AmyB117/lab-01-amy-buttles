@@ -2,7 +2,11 @@
 title: "Lab 01 - Hello R!"
 author: "Amy Buttles"
 output: 
-  tufte::tufte_html:
+  html_document: 
+    fig_width: 6
+    fig_height: 3
+    theme: cosmo
+tufte::tufte_html:
     css: ../lab.css
     tufte_variant: "envisioned"
     highlight: pygments
@@ -10,6 +14,7 @@ link-citations: true
 editor_options: 
   markdown: 
     wrap: sentence
+  chunk_output_type: inline
 ---
 
 ```{marginfigure}
@@ -317,14 +322,14 @@ dino_data%>%
 
 🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Added answer for Ex 2". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
-3.  Plot `y` vs. `x` for the `star` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`? 
+3.  Plot `y` vs. `x` for the `star` dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between `x` and `y` for this dataset. How does this value compare to the `r` of `dino`?
 
 ```{r}
 star <- datasaurus_dozen %>%
   filter(dataset == "star")
 ```
 
-dino **r** is = -0.06447185 and star **r** is = -0.0629611	
+dino **r** is = -0.06447185 and star **r** is = -0.0629611
 
 🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Added answer for Ex 3", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
@@ -335,7 +340,7 @@ circle <- datasaurus_dozen %>%
   filter(dataset == "circle")
 ```
 
-dino **r** is = -0.06447185 and circle **r** is = -0.06834336	
+dino **r** is = -0.06447185 and circle **r** is = -0.06834336
 
 🧶 ✅ ⬆️ *You should pause again, commit changes with the commit message "Added answer for Ex 4", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
@@ -379,7 +384,7 @@ Note that these values get saved in the YAML.
 knitr::include_graphics("img/fig-resize-local.png")
 ```
 
-You can also use different figure sizes for differen figures.
+You can also use different figure sizes for different figures.
 To do so click on the gear icon within the chunk where you want to make a change.
 Changing the figure sizes added new options to these chunks: `fig.width` and `fig.height`.
 You can change them by defining different values directly in your R Markdown document as well.
@@ -401,4 +406,4 @@ Play around with these until you're happy with the look.
 Not sure how to use emojis on your computer? Maybe a teammate can help? Or you can ask your TA as well!
 ```
 
-🧶 ✅ ⬆️ *Yay, you're done! Commit all remaining changes, use the commit message "Done with Lab 1!* 💪*", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Before you wrap up the assignment, make sure all documents are updated on your GitHub repo.*
+🧶 ✅ ⬆️ Yay*, you're done! Commit all remaining changes, use the commit message "Done with Lab 1!* 💪*", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Before you wrap up the assignment, make sure all documents are updated on your GitHub repo.*
